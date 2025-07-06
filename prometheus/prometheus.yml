@@ -22,3 +22,8 @@ scrape_configs:
       - targets: ['host.docker.internal:8015']
         labels:
           service: 'payment'
+  - job_name: 'notification'
+    static_configs:
+      - targets: ['host.docker.internal:8016']
+        labels:
+          service: 'notification'
